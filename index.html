@@ -3,47 +3,49 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>F3 Vintage Shop - Week 1</title>
+  <title>F3 Vintage Shop - Week 2</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#home" data-route="home">F3</a>
+    <a class="brand" href="#home" data-route="home" aria-label="F3 home">F3</a>
     <label class="search-box">
       <span>Search</span>
-      <input type="search" placeholder="Search engine">
+      <input id="searchInput" type="search" placeholder="Search engine">
     </label>
     <button class="nav-button" type="button" data-route="results">Products</button>
-    <button class="nav-button" type="button" data-route="cart">Cart <span id="cartCount">0</span></button>
+    <button class="nav-button cart-nav" type="button" data-route="cart">Cart <span id="cartCount">0</span></button>
   </header>
 
   <main>
-    <section id="home" class="view active">
-      <div class="category-row">
+    <section id="home" class="view active" aria-labelledby="homeTitle">
+      <div class="category-row" aria-label="Shopping categories">
         <button type="button">Women</button>
         <button type="button">Men</button>
         <button type="button">Sale</button>
       </div>
 
-      <section class="hero">
+      <section class="hero" aria-labelledby="homeTitle">
         <div>
-          <h1>Timeless Finds, Your Style.</h1>
+          <h1 id="homeTitle">Timeless Finds, Your Style.</h1>
           <p>Vintage clothing carefully curated in town.</p>
           <button class="primary-button" type="button" data-route="results">Shop collection</button>
         </div>
       </section>
 
-      <h2>Trending Items</h2>
-      <div id="trendingGrid" class="product-grid"></div>
+      <section aria-labelledby="trendingTitle">
+        <h2 id="trendingTitle">Trending Items</h2>
+        <div id="trendingGrid" class="product-grid"></div>
+      </section>
     </section>
 
-    <section id="results" class="view">
+    <section id="results" class="view" aria-labelledby="resultsTitle">
       <div class="page-title">
-        <button type="button" data-route="home">Back</button>
-        <h1>Search and Results</h1>
+        <button class="back-button" type="button" data-route="home">Back</button>
+        <h1 id="resultsTitle">Search and Results</h1>
       </div>
 
-      <div class="filter-row">
+      <div class="filter-row" aria-label="Product filters">
         <button type="button">Filter</button>
         <button type="button">Price</button>
         <button type="button">Size</button>
@@ -52,52 +54,88 @@
       <div id="resultsGrid" class="product-grid"></div>
     </section>
 
-    <section id="product" class="view">
+    <section id="product" class="view" aria-labelledby="productTitle">
       <div class="page-title">
-        <button type="button" data-route="results">Back</button>
-        <h1>Product Details</h1>
+        <button class="back-button" type="button" data-route="results">Back</button>
+        <h1 id="productTitle">Product Details</h1>
       </div>
 
       <article class="product-detail">
-        <div id="productImage" class="placeholder-image"></div>
-        <div>
+        <div id="productImage" class="detail-image"></div>
+        <div class="detail-copy">
           <h2 id="productName">Product Name</h2>
           <p>Condition: Good</p>
-          <p>Size: M</p>
+          <label class="size-select">
+            Size
+            <select id="sizeSelect">
+              <option>S</option>
+              <option selected>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </label>
           <button id="addToCart" class="primary-button" type="button">Add to Cart</button>
         </div>
       </article>
     </section>
 
-    <section id="cart" class="view">
+    <section id="cart" class="view" aria-labelledby="cartTitle">
       <div class="page-title">
-        <button type="button" data-route="results">Back</button>
-        <h1>Cart</h1>
+        <button class="back-button" type="button" data-route="results">Back</button>
+        <h1 id="cartTitle">Cart</h1>
       </div>
 
+      <button class="text-button" type="button" data-route="results">Continue shopping</button>
       <div id="cartItems" class="cart-list"></div>
-      <p class="subtotal">Subtotal: <strong id="subtotal">$0</strong></p>
+      <p id="emptyCart" class="empty-message">Your cart is currently empty.</p>
+      <div class="subtotal">
+        <span>Subtotal</span>
+        <strong id="subtotal">$0</strong>
+      </div>
       <button class="primary-button" type="button" data-route="checkout">Check out</button>
     </section>
 
-    <section id="checkout" class="view">
+    <section id="checkout" class="view" aria-labelledby="checkoutTitle">
       <div class="page-title">
-        <button type="button" data-route="cart">Back</button>
-        <h1>Checkout</h1>
+        <button class="back-button" type="button" data-route="cart">Back</button>
+        <h1 id="checkoutTitle">Checkout</h1>
       </div>
 
-      <form class="checkout-form">
-        <label>Email <input type="email" placeholder="Email"></label>
-        <label>First name <input type="text" placeholder="First name"></label>
-        <label>Last name <input type="text" placeholder="Last name"></label>
-        <label>Address <input type="text" placeholder="Address"></label>
-        <button class="primary-button" type="button" data-route="confirmation">Pay now</button>
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <fieldset>
+          <legend>Contact</legend>
+          <label>Email <input id="email" type="email" placeholder="Email" required></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Delivery</legend>
+          <label>First name <input id="firstName" type="text" placeholder="First name" required></label>
+          <label>Last name <input id="lastName" type="text" placeholder="Last name" required></label>
+          <label>Address <input id="address" type="text" placeholder="Address" required></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment</legend>
+          <label>Card number <input id="cardNumber" inputmode="numeric" placeholder="Card number" required></label>
+          <label>Expiry <input id="expiry" placeholder="MM/YY" required></label>
+          <label>CVV <input id="cvv" inputmode="numeric" placeholder="CVV" required></label>
+        </fieldset>
+
+        <p class="checkout-total">Total: <strong id="checkoutTotal">$0</strong></p>
+        <p id="formError" class="form-error" role="alert"></p>
+        <button class="primary-button" type="submit">Pay now</button>
       </form>
     </section>
 
-    <section id="confirmation" class="view confirmation">
-      <h1>Thank you for your purchase.</h1>
+    <section id="confirmation" class="view confirmation" aria-labelledby="confirmationTitle">
+      <div class="success-mark" aria-hidden="true"></div>
+      <h1 id="confirmationTitle">Thank you for your purchase.</h1>
       <p>Your order has been received.</p>
+      <section class="order-summary">
+        <h2>Order summary</h2>
+        <div id="summaryItems"></div>
+        <p>Total Paid: <strong id="summaryTotal">$0</strong></p>
+      </section>
       <button class="primary-button" type="button" data-route="home">Continue shopping</button>
     </section>
   </main>

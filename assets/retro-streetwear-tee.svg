@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="Retro Streetwear Tee placeholder">
+  <rect width="500" height="500" fill="#fafafa"/>
+  <path d="M145 80 205 55h90l60 25 95 78-56 72-45-36v245H151V194l-45 36-56-72z" fill="#151515"/>
+  <path d="M204 56c16 31 76 31 92 0" fill="none" stroke="#2c2c2c" stroke-width="12"/>
+  <text x="145" y="205" font-family="Georgia, serif" font-size="46" font-weight="700" fill="#55b7ca">Fear</text>
+  <text x="145" y="258" font-family="Georgia, serif" font-size="46" font-weight="700" fill="#55b7ca">No</text>
+  <text x="145" y="311" font-family="Georgia, serif" font-size="46" font-weight="700" fill="#55b7ca">Evil</text>
+  <circle cx="310" cy="235" r="72" fill="#e8e8e8"/>
+  <path d="M270 230c20-50 83-48 95 0 9 38-17 78-53 78s-56-40-42-78z" fill="#d8d8d8" stroke="#111" stroke-width="5"/>
+  <path d="M276 250h72M292 220h12M329 220h12M303 278h35" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+</svg>

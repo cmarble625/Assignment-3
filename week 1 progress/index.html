@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>F3 Vintage Shop - Week 1</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" data-route="home">F3</a>
+    <label class="search-box">
+      <span>Search</span>
+      <input type="search" placeholder="Search engine">
+    </label>
+    <button class="nav-button" type="button" data-route="results">Products</button>
+    <button class="nav-button" type="button" data-route="cart">Cart <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section id="home" class="view active">
+      <div class="category-row">
+        <button type="button">Women</button>
+        <button type="button">Men</button>
+        <button type="button">Sale</button>
+      </div>
+
+      <section class="hero">
+        <div>
+          <h1>Timeless Finds, Your Style.</h1>
+          <p>Vintage clothing carefully curated in town.</p>
+          <button class="primary-button" type="button" data-route="results">Shop collection</button>
+        </div>
+      </section>
+
+      <h2>Trending Items</h2>
+      <div id="trendingGrid" class="product-grid"></div>
+    </section>
+
+    <section id="results" class="view">
+      <div class="page-title">
+        <button type="button" data-route="home">Back</button>
+        <h1>Search and Results</h1>
+      </div>
+
+      <div class="filter-row">
+        <button type="button">Filter</button>
+        <button type="button">Price</button>
+        <button type="button">Size</button>
+      </div>
+
+      <div id="resultsGrid" class="product-grid"></div>
+    </section>
+
+    <section id="product" class="view">
+      <div class="page-title">
+        <button type="button" data-route="results">Back</button>
+        <h1>Product Details</h1>
+      </div>
+
+      <article class="product-detail">
+        <div id="productImage" class="placeholder-image"></div>
+        <div>
+          <h2 id="productName">Product Name</h2>
+          <p>Condition: Good</p>
+          <p>Size: M</p>
+          <button id="addToCart" class="primary-button" type="button">Add to Cart</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="cart" class="view">
+      <div class="page-title">
+        <button type="button" data-route="results">Back</button>
+        <h1>Cart</h1>
+      </div>
+
+      <div id="cartItems" class="cart-list"></div>
+      <p class="subtotal">Subtotal: <strong id="subtotal">$0</strong></p>
+      <button class="primary-button" type="button" data-route="checkout">Check out</button>
+    </section>
+
+    <section id="checkout" class="view">
+      <div class="page-title">
+        <button type="button" data-route="cart">Back</button>
+        <h1>Checkout</h1>
+      </div>
+
+      <form class="checkout-form">
+        <label>Email <input type="email" placeholder="Email"></label>
+        <label>First name <input type="text" placeholder="First name"></label>
+        <label>Last name <input type="text" placeholder="Last name"></label>
+        <label>Address <input type="text" placeholder="Address"></label>
+        <button class="primary-button" type="button" data-route="confirmation">Pay now</button>
+      </form>
+    </section>
+
+    <section id="confirmation" class="view confirmation">
+      <h1>Thank you for your purchase.</h1>
+      <p>Your order has been received.</p>
+      <button class="primary-button" type="button" data-route="home">Continue shopping</button>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

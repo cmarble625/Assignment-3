@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="Y2K Print Tee placeholder">
+  <rect width="500" height="500" fill="#fafafa"/>
+  <path d="M145 80 205 55h90l60 25 95 78-56 72-45-36v245H151V194l-45 36-56-72z" fill="#111"/>
+  <path d="M204 56c16 31 76 31 92 0" fill="none" stroke="#2b2b2b" stroke-width="12"/>
+  <text x="250" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="900" fill="#eeeeee">VINTAGE</text>
+  <text x="250" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="54" font-weight="900" fill="#ffffff">Y2K</text>
+  <rect x="150" y="278" width="200" height="42" rx="4" fill="#ffffff"/>
+  <text x="250" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="900" fill="#111">FAST DELIVERY</text>
+</svg>

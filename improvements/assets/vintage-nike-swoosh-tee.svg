@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="Vintage Nike Swoosh Tee placeholder">
+  <rect width="500" height="500" fill="#fafafa"/>
+  <path d="M145 80 205 55h90l60 25 95 78-56 72-45-36v245H151V194l-45 36-56-72z" fill="#efeee8"/>
+  <path d="M204 56c16 31 76 31 92 0" fill="none" stroke="#ddd8cf" stroke-width="12"/>
+  <path d="M150 265c80 42 178 20 222-54-72 42-148 58-222 54z" fill="#ba3f3a"/>
+  <text x="250" y="235" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#6c7f8d">Vintage</text>
+  <text x="250" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="900" fill="#454545">SWOOSH TEE</text>
+</svg>

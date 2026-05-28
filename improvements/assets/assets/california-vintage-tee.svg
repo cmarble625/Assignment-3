@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="California Vintage Tee placeholder">
+  <rect width="500" height="500" fill="#fafafa"/>
+  <path d="M145 80 205 55h90l60 25 95 78-56 72-45-36v245H151V194l-45 36-56-72z" fill="#55564f"/>
+  <path d="M204 56c16 31 76 31 92 0" fill="none" stroke="#444840" stroke-width="12"/>
+  <circle cx="250" cy="238" r="76" fill="none" stroke="#ebdc42" stroke-width="8"/>
+  <text x="250" y="215" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#e75da0">California</text>
+  <text x="250" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ebdc42">PIRATE LIFE</text>
+  <text x="250" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#62b7c9">VINTAGE TEE</text>
+</svg>

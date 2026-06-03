@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>F3 Vintage Shop</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" data-route="home" aria-label="F3 home">F3</a>
+    <label class="search-box">
+      <span aria-hidden="true">Search</span>
+      <input id="searchInput" type="search" placeholder="Search engine">
+    </label>
+    <nav class="top-actions" aria-label="Main navigation">
+      <button class="icon-button" type="button" data-route="results" aria-label="Open product list">Menu</button>
+      <button class="icon-button cart-button" type="button" data-route="cart" aria-label="Open cart">
+        Cart
+        <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="view active" aria-labelledby="homeTitle">
+      <div class="category-row" aria-label="Shopping categories">
+        <button class="category category-women" type="button">Women</button>
+        <button class="category category-men" type="button">Men</button>
+        <button class="category category-sale" type="button">Sale</button>
+      </div>
+
+      <section class="hero" aria-labelledby="homeTitle">
+        <div class="hero-copy">
+          <h1 id="homeTitle">Timeless Finds, Your Style.</h1>
+          <p>Vintage clothing carefully curated in town.</p>
+          <button class="small-button" type="button" data-route="results">Shop collection</button>
+        </div>
+      </section>
+
+      <section aria-labelledby="trendingTitle">
+        <h2 id="trendingTitle" class="section-title">Trending Items</h2>
+        <div id="trendingGrid" class="product-grid"></div>
+      </section>
+    </section>
+
+    <section id="results" class="view" aria-labelledby="resultsTitle">
+      <div class="page-toolbar">
+        <button class="back-button" type="button" data-route="home" aria-label="Back to home">Back</button>
+        <h1 id="resultsTitle">Search and Results</h1>
+      </div>
+
+      <div class="filter-row" aria-label="Product filters">
+        <button type="button">Filter</button>
+        <button type="button">Price</button>
+        <button type="button">Size</button>
+      </div>
+
+      <div id="resultsGrid" class="product-grid"></div>
+    </section>
+
+    <section id="product" class="view" aria-labelledby="productTitle">
+      <div class="page-toolbar">
+        <button class="back-button" type="button" data-route="results" aria-label="Back to products">Back</button>
+        <h1 id="productTitle">Product Details</h1>
+      </div>
+
+      <article class="product-detail">
+        <div id="productImage" class="detail-image"></div>
+        <div class="detail-copy">
+          <h2 id="productName">California Vintage Tee $45</h2>
+          <p>Condition: Good</p>
+          <label class="size-select">
+            Size
+            <select id="sizeSelect">
+              <option>S</option>
+              <option selected>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </label>
+          <button id="addToCart" class="primary-button" type="button">Add to Cart</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="cart" class="view" aria-labelledby="cartTitle">
+      <div class="page-toolbar">
+        <button class="back-button" type="button" data-route="product" aria-label="Back to product">Back</button>
+        <h1 id="cartTitle">Cart</h1>
+      </div>
+
+      <button class="text-button" type="button" data-route="results">Continue shopping</button>
+      <div id="cartItems" class="cart-list"></div>
+      <div class="subtotal">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">$0</strong>
+      </div>
+      <button class="primary-button" type="button" data-route="checkout">Check out</button>
+    </section>
+
+    <section id="checkout" class="view" aria-labelledby="checkoutTitle">
+      <div class="page-toolbar">
+        <button class="back-button" type="button" data-route="cart" aria-label="Back to cart">Back</button>
+        <h1 id="checkoutTitle">Checkout</h1>
+      </div>
+
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <fieldset>
+          <legend>Contact</legend>
+          <label>Email <input id="email" type="email" placeholder="Email" required></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Delivery</legend>
+          <div class="delivery-options">
+            <label><input type="radio" name="delivery" value="Ship" checked> Ship</label>
+            <label><input type="radio" name="delivery" value="Pickup"> Pickup</label>
+          </div>
+          <label>First name <input id="firstName" type="text" placeholder="First name" required></label>
+          <label>Last name <input id="lastName" type="text" placeholder="Last name" required></label>
+          <label>Address <input id="address" type="text" placeholder="Address" required></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment</legend>
+          <label>Card number <input id="cardNumber" inputmode="numeric" placeholder="Card number" required></label>
+          <label>Expiry <input id="expiry" placeholder="MM/YY" required></label>
+          <label>CVV <input id="cvv" inputmode="numeric" placeholder="CVV" required></label>
+        </fieldset>
+
+        <div class="checkout-summary">
+          <button class="coupon" type="button">Discount code</button>
+          <span>Total <strong id="checkoutTotal">$0</strong></span>
+        </div>
+        <p id="formError" class="form-error" role="alert"></p>
+        <button class="primary-button" type="submit">Pay now</button>
+      </form>
+    </section>
+
+    <section id="confirmation" class="view confirmation" aria-labelledby="confirmationTitle">
+      <div class="success-mark" aria-hidden="true"></div>
+      <h1 id="confirmationTitle">Thank you for your purchase.</h1>
+      <p>Your order <strong>#12345</strong> has been received.</p>
+
+      <section class="order-summary" aria-labelledby="summaryTitle">
+        <h2 id="summaryTitle">Order summary</h2>
+        <div id="summaryItems"></div>
+        <div class="subtotal">
+          <span>Total Paid</span>
+          <strong id="summaryTotal">$0</strong>
+        </div>
+      </section>
+
+      <button class="primary-button" type="button" data-route="home">Continue shopping</button>
+    </section>
+  </main>
+
+  <script src="js/app.js?v=4"></script>
+</body>
+</html>

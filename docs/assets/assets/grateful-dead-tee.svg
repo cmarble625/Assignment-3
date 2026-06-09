@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-label="Grey grateful dead style vintage band tee">
+  <rect width="700" height="700" fill="#fbfbf9"/>
+  <path d="M154 126 266 78h168l112 48 110 96-70 86-64-48v336H178V260l-64 48-70-86z" fill="#686865"/>
+  <path d="M266 80c31 52 137 52 168 0" fill="none" stroke="#555550" stroke-width="20"/>
+  <circle cx="350" cy="310" r="116" fill="#465f92" stroke="#d0a64d" stroke-width="8"/>
+  <text x="350" y="235" text-anchor="middle" font-family="Georgia, serif" font-size="45" font-weight="900" fill="#d4a044" transform="rotate(-8 350 235)">GRATEFUL</text>
+  <text x="350" y="405" text-anchor="middle" font-family="Georgia, serif" font-size="48" font-weight="900" fill="#d4a044" transform="rotate(5 350 405)">DEAD</text>
+  <circle cx="350" cy="310" r="48" fill="#e8e4d8"/>
+  <path d="M324 298h16M360 298h16M338 330h28" stroke="#202020" stroke-width="9" stroke-linecap="round"/>
+  <path d="M310 262c30-42 77-42 109 0-40-10-75-8-109 0z" fill="#9b3040"/>
+  <path d="M281 304c-44-20-60-64-25-88M419 304c44-20 60-64 25-88" fill="none" stroke="#9b3040" stroke-width="12"/>
+</svg>

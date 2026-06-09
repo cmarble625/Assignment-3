@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-label="Black monochrome hip hop portrait graphic tee">
+  <rect width="700" height="700" fill="#fbfbf9"/>
+  <path d="M166 118 270 76h160l104 42 120 98-72 92-62-48v336H180V260l-62 48-72-92z" fill="#151515"/>
+  <path d="M268 78c30 52 135 52 164 0" fill="none" stroke="#242424" stroke-width="20"/>
+  <rect x="236" y="190" width="232" height="255" fill="#d8d8d8"/>
+  <rect x="256" y="210" width="192" height="215" fill="#111"/>
+  <text x="350" y="172" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="52" font-weight="900" fill="#e8e8e8" letter-spacing="8">ICE CUBE</text>
+  <circle cx="350" cy="302" r="60" fill="#cfcfcf"/>
+  <path d="M282 375c36-62 104-62 140 0v50H282z" fill="#cfcfcf"/>
+  <path d="M298 297h104M316 282h32M352 282h32M326 326h54" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+  <path d="M288 242c38-38 111-35 139 7-43-8-92-2-139-7z" fill="#111"/>
+</svg>
